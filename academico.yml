@@ -1,0 +1,18 @@
+server:
+  port: 5601
+  context-path: /academico
+
+spring:
+  application:
+    name: academico
+    profiles: docker
+  datasource:
+    url: jdbc:mysql://localhost:8889/olimpo
+    username: root
+    password: root
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: none
