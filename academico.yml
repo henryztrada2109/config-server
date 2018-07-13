@@ -7,9 +7,9 @@ spring:
     name: academico
     profiles: docker
   datasource:
-    url: jdbc:mysql://localhost:8889/olimpo
-    username: root
-    password: root
+    url: jdbc:mysql://172.16.7.115:8889/olimpo
+    username: sitecode
+    password: sitecode
 
   jpa:
     database-platform: org.hibernate.dialect.MySQL5Dialect
