@@ -16,3 +16,10 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: none
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
+  client:
+    serviceUrl:
+      defaultZone: http://172.16.7.115:1111/eureka/
