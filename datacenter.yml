@@ -7,7 +7,7 @@ spring:
     name: datacenter
     profiles: docker
   datasource:
-    url: jdbc:mysql://172.16.7.115:8889/olimpo
+    url: jdbc:mysql://192.168.0.16:8889/olimpo
     username: sitecode
     password: sitecode
 
@@ -22,4 +22,4 @@ eureka:
     lease-expiration-duration-in-seconds: 2
   client:
     serviceUrl:
-      defaultZone: http://172.16.7.115:1111/eureka/
+      defaultZone: http://192.168.0.16:1111/eureka/
