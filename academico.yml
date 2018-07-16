@@ -24,7 +24,7 @@ eureka:
     #prefer-ip-address: true
     ip-address: 172.16.7.115
     hostname: 172.16.7.115
-    homePageUrl: http://172.16.7.115:5600/
+    #homePageUrl: http://172.16.7.115:5600/
   client:
     registerWithEureka: true
     fetchRegistry: true
