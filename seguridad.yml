@@ -7,7 +7,8 @@ spring:
     name: seguridad
     profiles: docker
   datasource:
-    url: jdbc:mysql://192.168.0.16:8889/olimpo
+    #url: jdbc:mysql://192.168.0.16:8889/olimpo
+    url: jdbc:mysql://172.16.7.115:8889/olimpo
     username: sitecode
     password: sitecode
 
@@ -20,9 +21,7 @@ eureka:
   instance:
     lease-renewal-interval-in-seconds: 1
     lease-expiration-duration-in-seconds: 2
-    statusPageUrlPath: http://192.168.0.16/
-    healthCheckUrlPath: http://192.168.0.16/
-    virtualHostName: http://192.168.0.16/
   client:
     serviceUrl:
-      defaultZone: http://192.168.0.16:1111/eureka/
+      #defaultZone: http://192.168.0.16:1111/eureka/
+      defaultZone: http://172.16.7.115:1111/eureka/
