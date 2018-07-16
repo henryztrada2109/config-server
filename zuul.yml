@@ -9,4 +9,4 @@ eureka:
     preferIpAddress: true
 ribbon:
   eureka:
-    enabled: false
+    enabled: true
