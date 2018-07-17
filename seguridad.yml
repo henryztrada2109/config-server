@@ -1,6 +1,6 @@
 server:
   port: 5600
-  context-path: /seguridad
+  #context-path: /seguridad
 
 spring:
   application:
