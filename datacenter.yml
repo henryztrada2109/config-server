@@ -1,14 +1,13 @@
 server:
   port: 5602
-  context-path: /datacenter
+  context-path: /v1
 
 spring:
   application:
     name: datacenter
     profiles: docker
   datasource:
-    #url: jdbc:mysql://192.168.0.16:8889/olimpo
-    url: jdbc:mysql://172.16.7.115:8889/olimpo
+    url: jdbc:mysql://localhost:8889/olimpo
     username: sitecode
     password: sitecode
 
@@ -21,13 +20,11 @@ eureka:
   instance:
     lease-renewal-interval-in-seconds: 1
     lease-expiration-duration-in-seconds: 2
-    ip-address: 172.16.7.115
     #ip-address: 192.168.0.16
-    hostname: 172.16.7.115
-    #hostname: 192.168.0.16
+    #hostname: 172.16.7.115
   client:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      #defaultZone: http://192.168.0.16:1111/eureka/
-      defaultZone: http://172.16.7.115:1111/eureka/
+      #defaultZone: http://172.16.7.115:1111/eureka/
+      defaultZone: http://localhost:1111/eureka/
