@@ -1,9 +1,9 @@
 server:
-  port: 5501
+  port: ${port:5501}
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://eureka:1111/eureka/
+      defaultZone: ${url.registry:http://registry:1111/eureka/}
   instance:
     preferIpAddress: true
 ribbon:
