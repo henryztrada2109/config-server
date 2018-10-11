@@ -1,5 +1,5 @@
 server:
-  port: 5602
+  port: ${port:5602}
   context-path: /v1
 
 spring:
@@ -7,9 +7,9 @@ spring:
     name: datacenter
     profiles: docker
   datasource:
-    url: jdbc:mysql://localhost:8889/olimpo
-    username: sitecode
-    password: sitecode
+    url: jdbc:mysql://${url.db:localhost:8889/olimpo}
+    username: ${url.db.username:sitecode}
+    password: ${url.db.password:sitecode}
 
   jpa:
     database-platform: org.hibernate.dialect.MySQL5Dialect
@@ -20,11 +20,10 @@ eureka:
   instance:
     lease-renewal-interval-in-seconds: 1
     lease-expiration-duration-in-seconds: 2
-    #ip-address: 192.168.0.16
-    #hostname: 172.16.7.115
+    ip-address: ${ipaddress:192.168.0.16}
+    hostname: ${hostname:172.16.7.115}
   client:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      #defaultZone: http://172.16.7.115:1111/eureka/
-      defaultZone: http://localhost:1111/eureka/
+      defaultZone: ${url.registry:http://registry:1111/eureka/}
