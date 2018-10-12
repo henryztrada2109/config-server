@@ -9,3 +9,11 @@ eureka:
 ribbon:
   eureka:
     enabled: true
+zuul:
+  routes:
+    seguridad:
+      path: /api/seguridad/**
+      sensitive-headers: Cookie, Set-Cookie
+    datacenter:
+      path: /api/datacenter/**
+      sensitive-headers: Cookie, Set-Cookie
