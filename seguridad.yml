@@ -8,7 +8,6 @@ spring:
     profiles: docker
   datasource:
     url: jdbc:mysql://${url.db:localhost:3306/olimpo}
-    driver-class-name: com.mysql.jdbc.Driver
     username: ${url.db.username:sitecode}
     password: ${url.db.password:sitecode}
 
