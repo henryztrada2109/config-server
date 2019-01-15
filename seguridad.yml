@@ -18,6 +18,8 @@ spring:
       ddl-auto: none
 eureka:
   instance:
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 10
     ip-address: ${ipaddress:52.27.137.28}
     hostname: ${hostname:52.27.137.28}
   client:
