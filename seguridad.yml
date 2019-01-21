@@ -8,8 +8,8 @@ spring:
     profiles: docker
   datasource:
     url: jdbc:mysql://${url.db:localhost:3306/olimpo}
-    username: ${url.db.username:sitecode}
-    password: ${url.db.password:sitecode}
+    username: ${url.db.username:root}
+    password: ${url.db.password:root}
 
   jpa:
     database-platform: org.hibernate.dialect.MySQL5Dialect
@@ -20,8 +20,8 @@ eureka:
   instance:
     lease-renewal-interval-in-seconds: 5
     lease-expiration-duration-in-seconds: 10
-    ip-address: ${ipaddress:52.27.137.28}
-    hostname: ${hostname:52.27.137.28}
+    ip-address: ${ipaddress:localhost}
+    hostname: ${hostname:localhost}
   client:
     registerWithEureka: true
     fetchRegistry: true
