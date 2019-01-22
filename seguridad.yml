@@ -20,8 +20,8 @@ eureka:
   instance:
     lease-renewal-interval-in-seconds: 5
     lease-expiration-duration-in-seconds: 10
-    #ip-address: ${ipaddress:localhost}
-    #hostname: ${hostname:localhost}
+    ip-address: ${ipaddress:localhost}
+    hostname: ${hostname:localhost}
   client:
     registerWithEureka: true
     fetchRegistry: true
