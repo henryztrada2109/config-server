@@ -6,6 +6,10 @@ eureka:
       defaultZone: ${url.registry:http://registry:1111/eureka/}
   instance:
     preferIpAddress: true
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 10
+    ip-address: ${ipaddress:localhost}
+    hostname: ${hostname:localhost}
 ribbon:
   eureka:
     enabled: true
