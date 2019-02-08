@@ -10,6 +10,9 @@ spring:
     url: jdbc:mysql://${url.db:localhost:3306/olimpo}
     username: ${url.db.username:root}
     password: ${url.db.password:root}
+  liquibase:
+    change-log: classpath:dbchangelog.xml
+    enabled: true
 
   jpa:
     database-platform: org.hibernate.dialect.MySQL5Dialect
@@ -27,3 +30,4 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: ${url.registry:http://registry:1111/eureka/}
+  
