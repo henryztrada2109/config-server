@@ -11,7 +11,6 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     username: ${url.db.username:root}
     password: ${url.db.password:root}
-    continue-on-error: true
 
   jpa:
     database-platform: org.hibernate.dialect.MySQL5Dialect
