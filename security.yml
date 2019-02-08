@@ -2,10 +2,6 @@ server:
   port: ${port:5600}
   context-path: /v1
 
-liquibase:
-  change-log: classpath:dbchangelog.xml
-  enabled: true
-
 spring:
   application:
     name: seguridad
@@ -15,12 +11,15 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     username: ${url.db.username:root}
     password: ${url.db.password:root}
+    continue-on-error: true
 
   jpa:
     database-platform: org.hibernate.dialect.MySQL5Dialect
     show-sql: true
-    hbm2ddl:
-      auto: create
+
+liquibase:
+  change-log: classpath:dbchangelog.xml
+  enabled: true
 
 eureka:
   instance:
