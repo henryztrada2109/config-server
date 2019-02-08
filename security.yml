@@ -19,6 +19,9 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.MySQL5Dialect
     show-sql: true
+    hbm2ddl:
+      auto: create
+
 eureka:
   instance:
     lease-renewal-interval-in-seconds: 5
