@@ -7,7 +7,7 @@ spring:
     name: datacenter
     profiles: docker
   datasource:
-    url: jdbc:mysql://${url.db:localhost:3306/olimpo}
+    url: jdbc:mysql://${url.db:localhost:3306/olimpo?createDatabaseIfNotExist=true}
     driver-class-name: com.mysql.jdbc.Driver
     username: ${url.db.username:root}
     password: ${url.db.password:root}
