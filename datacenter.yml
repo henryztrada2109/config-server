@@ -8,14 +8,18 @@ spring:
     profiles: docker
   datasource:
     url: jdbc:mysql://${url.db:localhost:3306/olimpo}
+    driver-class-name: com.mysql.jdbc.Driver
     username: ${url.db.username:root}
     password: ${url.db.password:root}
 
   jpa:
     database-platform: org.hibernate.dialect.MySQL5Dialect
     show-sql: true
-    hibernate:
-      ddl-auto: none
+
+liquibase:
+  change-log: classpath:dbchangelog.xml
+  enabled: true
+
 eureka:
   instance:
     lease-renewal-interval-in-seconds: 5
